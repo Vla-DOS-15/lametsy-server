@@ -1,4 +1,3 @@
-
 using lametsy_server;
 
 var builder = WebApplication.CreateBuilder(args);

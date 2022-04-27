@@ -4,7 +4,6 @@ namespace lametsy_server;
 
 public class MyCalulator : IMyCalulator
 {
-
     public CalculatorResult ResultAdd(decimal a, decimal b)
     {
         try
