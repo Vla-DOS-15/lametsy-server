@@ -1,7 +1,6 @@
 using System.Net;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using lametsy_server.Models;
 
 namespace lametsy_server.Controllers;
 
@@ -32,43 +31,4 @@ public class MyCalulatorController : ControllerBase
        
         return Ok(result);
     }
-    //[HttpGet("calculator")]
-    //public virtual IActionResult GetAddOperation(string opp, double a)
-    //{
-
-    //    double result = 0;
-    //    switch (opp)
-    //    {
-    //        case "cos": { result = Math.Cos(a); break; }
-    //        default: return BadRequest("input malformed");
-    //    }
-    //    return Ok(new CalculatorResult
-    //    {
-    //        OperationResult = result
-    //    });
-    //}
-    //[HttpGet("calculatorCos")]
-    //public IActionResult GetAddOperation(string opp, double a)
-    //{
-    //    double result = 0;
-
-    //    switch (opp)
-    //    {
-    //        case "cos": { result = Math.Cos(a); break; }
-    //        default: return BadRequest("input malformed");
-    //    }
-    //    return Ok(new CalculatorResult
-    //    {
-    //        OperationResult = result
-    //    });
-    //}
-}
-
-
-
-public class Request
-{
-    public string opp { get; set; }
-    public decimal a { get; set; }
-    public decimal b { get; set; }
 }

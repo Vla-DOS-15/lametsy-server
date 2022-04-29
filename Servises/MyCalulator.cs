@@ -6,20 +6,20 @@ public class MyCalulator : IMyCalulator
 {
     public CalculatorResult ResultAdd(decimal a, decimal b)
     {
+        var result = new CalculatorResult
+        {
+            Error = "No Error"
+        };
         try
         {
-            return new CalculatorResult 
-            { 
-                OperationResult = a + b 
-            };
+            result.OperationResult = a + b;
         }
         catch (Exception ex)
         {
-            return new CalculatorResult
-            {
-                Error = ex.Message
-            };
+            result.Error = ex.Message;
+
         }
+        return result;
     }
     public CalculatorResult ResultDiv(decimal a, decimal b)
     {
@@ -40,36 +40,36 @@ public class MyCalulator : IMyCalulator
     }
     public CalculatorResult ResultSub(decimal a, decimal b)
     {
+        var result = new CalculatorResult
+        {
+            Error = "No Error"
+        };
         try
         {
-            return new CalculatorResult
-            {
-                OperationResult = a - b
-            };
+            result.OperationResult = a - b;
         }
         catch (Exception ex)
         {
-            return new CalculatorResult
-            {
-                Error = ex.Message
-            };
+            result.Error = ex.Message;
+
         }
+        return result;
     }
     public CalculatorResult ResultMul(decimal a, decimal b)
     {
+        var result = new CalculatorResult
+        {
+            Error = "No Error"
+        };
         try
         {
-            return new CalculatorResult
-            {
-                OperationResult = a * b
-            };
+            result.OperationResult = a * b;
         }
         catch (Exception ex)
         {
-            return new CalculatorResult
-            {
-                Error = ex.Message
-            };
+            result.Error = ex.Message;
+
         }
+        return result;
     }
 }
